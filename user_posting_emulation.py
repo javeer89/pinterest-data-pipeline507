@@ -6,7 +6,7 @@ import      boto3
 import      json
 import      sqlalchemy
 from        sqlalchemy import text
-
+from        datetime import datetime, date, time
 
 random.seed(100)
 
@@ -27,6 +27,34 @@ class       AWSDBConnector:
 
 
 new_connector = AWSDBConnector()
+
+def post_data_to_api (invoke_url: str, result: dict):
+
+    # create value dict from result
+    result_keys = result.keys()
+    result_values = {}
+    for k in result_keys:
+        result_values[k] = result[k]
+
+    print('result_values: :\t', result_values)
+    print("dictionary created")
+
+    headers =       {'Content-Type': 'application/vnd.kafka.json.v2+json'}    
+    payload =       json.dumps({
+                            "StreamName": (f"{result} data"),
+                            "Data":     [{   #Data should be send as pairs of column_name:value, with different columns separated by commas
+                                            "value": result_values
+                                        }]
+                                    }, default=datetime_handler)
+
+    response = requests.request("POST", invoke_url, headers=headers, data=payload)
+    print(response.status_code)
+
+
+def datetime_handler(obj):
+    if isinstance(obj, (datetime, date, time)):
+        return str(obj)
+
 
 def run_infinite_post_data_loop():
             while True:
@@ -51,23 +79,15 @@ def run_infinite_post_data_loop():
                     for row in user_selected_row:
                         user_result = dict(row._mapping)
                     
+                    post_data_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.pin",pin_result)
+                    post_data_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.geo",geo_result)
+                    post_data_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.user",user_result)
+
                     print(pin_result)
                     print(geo_result)
                     print(user_result)
 
 
-def post_data_to_api (invoke_url: str, result: dict):
-
-    headers =       {'Content-Type': 'application/vnd.kafka.json.v2+json'}    
-    payload =       json.dumps({
-                            "StreamName": "Post_Data",
-                            "Data":     [{   #Data should be send as pairs of column_name:value, with different columns separated by commas
-                                            "value": result
-                                        }]
-                                    })
-
-    response = requests.request("POST", invoke_url, headers=headers, data=payload)
-    print(response.status_code)
 
 
 
