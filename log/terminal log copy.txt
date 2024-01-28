@@ -1,0 +1,515 @@
+/f/DevOps/aiCORE/vsCode/Project
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ ls
+data_centralisation/  pinterest_data_pipeline/
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd pinterest_data_pipeline/
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean        
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ 
+ *  History restored 
+
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd p
+bash: cd: p: No such file or directory
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd pinterest_data_pipeline/
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   pinterest_data_pipeline.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+
+
+
+
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd pinterest_data_pipeline/
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ ssh -i "0e2a0bfcc015-key-pair.pem" ec2-user@ec2-184-73-75-230.compute-1.amazonaws.com
+Last login: Sun Jan 21 18:33:03 2024 from finc-22-b2-v4wan-160989-cust310.vm7.cable.virginm.net
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2025-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+[ec2-user@ip-172-31-43-131 ~]$ client.dns.lookup
+-bash: client.dns.lookup: command not found
+[ec2-user@ip-172-31-43-131 ~]$ ls
+Downloads  kafka-connect-s3
+[ec2-user@ip-172-31-43-131 ~]$ cd do
+-bash: cd: do: No such file or directory
+[ec2-user@ip-172-31-43-131 ~]$ cd Downloads/
+[ec2-user@ip-172-31-43-131 Downloads]$ ls
+confluent-7.2.0  confluent-7.2.0.tar.gz  kafka_2.12-2.8.1
+[ec2-user@ip-172-31-43-131 Downloads]$ cd confluent-7.2.0/
+[ec2-user@ip-172-31-43-131 confluent-7.2.0]$ ls
+bin  etc  lib  libexec  README  share  src
+[ec2-user@ip-172-31-43-131 confluent-7.2.0]$ cd etc
+[ec2-user@ip-172-31-43-131 etc]$ ls
+cli               confluent-control-center     confluent-hub-client  confluent-metadata-service  confluent-security  kafka-connect-replicator  ksqldb      schema-registry
+confluent-common  confluent-control-center-fe  confluent-kafka-mqtt  confluent-rebalancer        kafka               kafka-rest                rest-utils  schema-registry-plugins
+[ec2-user@ip-172-31-43-131 etc]$ cd kafka-rest/
+[ec2-user@ip-172-31-43-131 kafka-rest]$ ls
+kafka-rest.properties  log4j.properties
+[ec2-user@ip-172-31-43-131 kafka-rest]$ nano kafka-rest.properties
+[ec2-user@ip-172-31-43-131 kafka-rest]$
+ *  History restored 
+
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd p
+bash: cd: p: No such file or directory
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd pinterest_data_pipeline/
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$
+ *  History restored 
+
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$
+ *  History restored 
+
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd p
+bash: cd: p: No such file or directory
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project
+$ cd pinterest_data_pipeline/
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ ssh -i "0e2a0bfcc015-key-pair.pem" ec2-user@ec2-184-73-75-230.compute-1.amazonaws.com
+Last login: Mon Jan 22 22:01:33 2024 from finc-22-b2-v4wan-160989-cust310.vm7.cable.virginm.net
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2025-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+6 package(s) needed for security, out of 9 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-43-131 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-43-131 ~]$ ls
+Downloads  kafka-connect-s3    
+[ec2-user@ip-172-31-43-131 ~]$ cd Downloads/
+[ec2-user@ip-172-31-43-131 Downloads]$ ls
+confluent-7.2.0  confluent-7.2.0.tar.gz  kafka_2.12-2.8.1
+[ec2-user@ip-172-31-43-131 Downloads]$ cd kafka_2.12-2.8.1/
+[ec2-user@ip-172-31-43-131 kafka_2.12-2.8.1]$ ls
+bin  config  libs  LICENSE  licenses  NOTICE  site-docs
+[ec2-user@ip-172-31-43-131 kafka_2.12-2.8.1]$ cd bin/
+[ec2-user@ip-172-31-43-131 bin]$ ls
+client.properties        kafka-broker-api-versions.sh  kafka-consumer-groups.sh     kafka-features.sh         kafka-preferred-replica-election.sh  kafka-server-start.sh               kafka-verifiable-consumer.sh     zookeeper-server-start.sh
+connect-distributed.sh   kafka-cluster.sh              kafka-consumer-perf-test.sh  kafka-leader-election.sh  kafka-producer-perf-test.sh          kafka-server-stop.sh                kafka-verifiable-producer.sh     zookeeper-server-stop.sh
+connect-mirror-maker.sh  kafka-configs.sh              kafka-delegation-tokens.sh   kafka-log-dirs.sh         kafka-reassign-partitions.sh         kafka-storage.sh                    trogdor.sh                       zookeeper-shell.sh
+connect-standalone.sh    kafka-console-consumer.sh     kafka-delete-records.sh      kafka-metadata-shell.sh   kafka-replica-verification.sh        kafka-streams-application-reset.sh  windows
+kafka-acls.sh            kafka-console-producer.sh     kafka-dump-log.sh            kafka-mirror-maker.sh     kafka-run-class.sh                   kafka-topics.sh                     zookeeper-security-migration.sh
+[ec2-user@ip-172-31-43-131 bin]$ ./kafka-console-consumer.sh --bootstrap-server b-2.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098,b-1.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098,b-3.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098 --consumer-config client.properties --topic $MY_USER_NAME.geo --from-beginning --group students--create --topic 0e2a0bfcc015.pin
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+consumer-config is not a recognized option
+Option                                   Description
+------                                   -----------
+--bootstrap-server <String: server to    REQUIRED: The server(s) to connect to.
+  connect to>
+--consumer-property <String:             A mechanism to pass user-defined
+  consumer_prop>                           properties in the form key=value to
+                                           the consumer.
+--consumer.config <String: config file>  Consumer config properties file. Note
+                                           that [consumer-property] takes
+                                           precedence over this config.
+--enable-systest-events                  Log lifecycle events of the consumer
+                                           in addition to logging consumed
+                                           messages. (This is specific for
+                                           system tests.)
+--formatter <String: class>              The name of a class to use for
+                                           formatting kafka messages for
+                                           display. (default: kafka.tools.
+                                           DefaultMessageFormatter)
+--from-beginning                         If the consumer does not already have
+                                           an established offset to consume
+                                           from, start with the earliest
+                                           message present in the log rather
+                                           than the latest message.
+--group <String: consumer group id>      The consumer group id of the consumer.
+--help                                   Print usage information.
+--isolation-level <String>               Set to read_committed in order to      
+                                           filter out transactional messages
+                                           which are not committed. Set to
+                                           read_uncommitted to read all
+                                           messages. (default: read_uncommitted)
+--key-deserializer <String:
+  deserializer for key>
+--max-messages <Integer: num_messages>   The maximum number of messages to
+                                           consume before exiting. If not set,
+                                           consumption is continual.
+--offset <String: consume offset>        The offset id to consume from (a non-
+                                           negative number), or 'earliest'
+                                           which means from beginning, or
+                                           'latest' which means from end
+                                           (default: latest)
+--partition <Integer: partition>         The partition to consume from.
+                                           Consumption starts from the end of
+                                           the partition unless '--offset' is
+                                           specified.
+--property <String: prop>                The properties to initialize the
+                                           message formatter. Default
+                                           properties include:
+                                          print.timestamp=true|false
+                                          print.key=true|false
+                                          print.offset=true|false
+                                          print.partition=true|false
+                                          print.headers=true|false
+                                          print.value=true|false
+                                          key.separator=<key.separator>
+                                          line.separator=<line.separator>
+                                          headers.separator=<line.separator>
+                                          null.literal=<null.literal>
+                                          key.deserializer=<key.deserializer>
+                                          value.deserializer=<value.
+                                           deserializer>
+                                          header.deserializer=<header.
+                                           deserializer>
+                                         Users can also pass in customized
+                                           properties for their formatter; more
+                                           specifically, users can pass in
+                                           properties keyed with 'key.
+                                           deserializer.', 'value.
+                                           deserializer.' and 'headers.
+                                           deserializer.' prefixes to configure
+                                           their deserializers.
+--skip-message-on-error                  If there is an error when processing a
+                                           message, skip it instead of halt.
+--timeout-ms <Integer: timeout_ms>       If specified, exit if no message is
+                                           available for consumption for the
+                                           specified interval.
+--topic <String: topic>                  The topic id to consume on.
+--value-deserializer <String:
+  deserializer for values>
+--version                                Display Kafka version.
+--whitelist <String: whitelist>          Regular expression specifying
+                                           whitelist of topics to include for
+                                           consumption.
+[ec2-user@ip-172-31-43-131 bin]$ ./kafka-console-consumer.sh --bootstrap-server b-2.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098,b-1.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098,b-3.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098 --consumer-config client.properties --topic 0e2a0bfcc015.pin --from-beginning
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+consumer-config is not a recognized option
+Option                                   Description
+------                                   -----------
+--bootstrap-server <String: server to    REQUIRED: The server(s) to connect to.
+  connect to>
+--consumer-property <String:             A mechanism to pass user-defined
+  consumer_prop>                           properties in the form key=value to
+                                           the consumer.
+--consumer.config <String: config file>  Consumer config properties file. Note
+                                           that [consumer-property] takes
+                                           precedence over this config.
+--enable-systest-events                  Log lifecycle events of the consumer
+                                           in addition to logging consumed
+                                           messages. (This is specific for
+                                           system tests.)
+--formatter <String: class>              The name of a class to use for
+                                           formatting kafka messages for
+                                           display. (default: kafka.tools.
+                                           DefaultMessageFormatter)
+--from-beginning                         If the consumer does not already have
+                                           an established offset to consume
+                                           from, start with the earliest
+                                           message present in the log rather
+                                           than the latest message.
+--group <String: consumer group id>      The consumer group id of the consumer.
+--help                                   Print usage information.
+--isolation-level <String>               Set to read_committed in order to      
+                                           filter out transactional messages
+                                           which are not committed. Set to
+                                           read_uncommitted to read all
+                                           messages. (default: read_uncommitted)
+--key-deserializer <String:
+  deserializer for key>
+--max-messages <Integer: num_messages>   The maximum number of messages to
+                                           consume before exiting. If not set,
+                                           consumption is continual.
+--offset <String: consume offset>        The offset id to consume from (a non-
+                                           negative number), or 'earliest'
+                                           which means from beginning, or
+                                           'latest' which means from end
+                                           (default: latest)
+--partition <Integer: partition>         The partition to consume from.
+                                           Consumption starts from the end of
+                                           the partition unless '--offset' is
+                                           specified.
+--property <String: prop>                The properties to initialize the
+                                           message formatter. Default
+                                           properties include:
+                                          print.timestamp=true|false
+                                          print.key=true|false
+                                          print.offset=true|false
+                                          print.partition=true|false
+                                          print.headers=true|false
+                                          print.value=true|false
+                                          key.separator=<key.separator>
+                                          line.separator=<line.separator>
+                                          headers.separator=<line.separator>
+                                          null.literal=<null.literal>
+                                          key.deserializer=<key.deserializer>
+                                          value.deserializer=<value.
+                                           deserializer>
+                                          header.deserializer=<header.
+                                           deserializer>
+                                         Users can also pass in customized
+                                           properties for their formatter; more
+                                           specifically, users can pass in
+                                           properties keyed with 'key.
+                                           deserializer.', 'value.
+                                           deserializer.' and 'headers.
+                                           deserializer.' prefixes to configure
+                                           their deserializers.
+--skip-message-on-error                  If there is an error when processing a
+                                           message, skip it instead of halt.
+--timeout-ms <Integer: timeout_ms>       If specified, exit if no message is
+                                           available for consumption for the
+                                           specified interval.
+--topic <String: topic>                  The topic id to consume on.
+--value-deserializer <String:
+  deserializer for values>
+--version                                Display Kafka version.
+--whitelist <String: whitelist>          Regular expression specifying
+                                           whitelist of topics to include for
+                                           consumption.
+[ec2-user@ip-172-31-43-131 bin]$ ./kafka-console-consumer.sh --bootstrap-server b-2.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098,b-1.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098,b-3.pinterestmskcluster.w8g8jt.c12.kafka.us-east-1.amazonaws.com:9098 --consumer.config client.properties --topic 0e2a0bfcc015.pin --from-beginning
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[2024-01-24 19:28:24,112] ERROR Error processing message, terminating consumer process:  (kafka.tools.ConsoleConsumer$)
+org.apache.kafka.common.errors.GroupAuthorizationException: Not authorized to access group: console-consumer-53044
+Processed a total of 0 messages
+[ec2-user@ip-172-31-43-131 bin]$ EXIT
+-bash: EXIT: command not found
+[ec2-user@ip-172-31-43-131 bin]$
+[ec2-user@ip-172-31-43-131 bin]$ WQ
+-bash: WQ: command not found
+[ec2-user@ip-172-31-43-131 bin]$ W
+-bash: W: command not found
+[ec2-user@ip-172-31-43-131 bin]$ Q
+-bash: Q: command not found
+[ec2-user@ip-172-31-43-131 bin]$ exit
+logout
+Connection to ec2-184-73-75-230.compute-1.amazonaws.com closed.
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   __pycache__/user_posting_emulation.cpython-311.pyc
+        modified:   pinterest_data_pipeline.ipynb
+        modified:   user_posting_emulation.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git add .
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git commit -m "progress so far - more updates coming."
+[main daf02eb] progress so far - more updates coming.
+ 3 files changed, 208 insertions(+), 44 deletions(-)
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 4.93 KiB | 4.93 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/javeer89/pinterest-data-pipeline507.git
+   ee14c30..daf02eb  main -> main
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ python user_posting_emulation.py 
+Traceback (most recent call last):
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\javee\Miniconda3\Lib\http\client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\javee\Miniconda3\Lib\http\client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\javee\Miniconda3\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\javee\Miniconda3\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "C:\Users\javee\Miniconda3\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000025EC8367DD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='moyj7yazp4.execute-api.us-east-1.amazonaws.com', port=80): Max retries exceeded with url: /pinDP/topics/0e2a0bfcc015.pin (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025EC8367DD0>: Failed to establish a new connection: [WinError 10061] 
+No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 129, in <module>
+    run_infinite_post_data_loop()
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 70, in run_infinite_post_data_loop
+    post_to_api("http://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.pin",pin_result)
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 41, in post_to_api
+    response = requests.request("POST", invoke_url, headers=headers, data=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='moyj7yazp4.execute-api.us-east-1.amazonaws.com', port=80): Max retries exceeded with url: /pinDP/topics/0e2a0bfcc015.pin (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025EC8367DD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ user_posting_emulation.py
+bash: user_posting_emulation.py: command not found
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ python user_posting_emulation.py
+values_dict: :   {'index': 7528, 'unique_id': 'fbe53c66-3442-4773-b19e-d3ec6f54dddf', 'title': 'No Title Data Available', 'description': 'No description available Story format', 'poster_name': 'User Info Error', 'follower_count': 'User Info Error', 'tag_list': 'N,o, ,T,a,g,s, ,A,v,a,i,l,a,b,l,e', 'is_image_or_video': 'multi-video(story page format)', 'image_src': 'Image src error.', 'downloaded': 0, 'save_location': 'Local save in /data/mens-fashion', 'category': 'mens-fashion'}
+504
+values_dict: :   {'ind': 7528, 'timestamp': datetime.datetime(2020, 8, 28, 3, 52, 47), 'latitude': -89.9787, 'longitude': -173.293, 'country': 'Albania'}
+Traceback (most recent call last):
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 86, in <module>
+    run_infinite_post_data_loop()
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 79, in run_infinite_post_data_loop
+    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.geo",geo_result)
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 44, in post_to_api
+    payload =       json.dumps  ({
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+(base)
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
+$ python user_posting_emulation.py
+values_dict: :   {'index': 7528, 'unique_id': 'fbe53c66-3442-4773-b19e-d3ec6f54dddf', 'title': 'No Title Data Available', 'description': 'No description available Story format', 'poster_name': 'User Info Error', 'follower_count': 'User Info Error', 'tag_list': 'N,o, ,T,a,g,s, ,A,v,a,i,l,a,b,l,e', 'is_image_or_video': 'multi-video(story page format)', 'image_src': 'Image src error.', 'downloaded': 0, 'save_location': 'Local save in /data/mens-fashion', 'category': 'mens-fashion'}
+504
+values_dict: :   {'ind': 7528, 'timestamp': datetime.datetime(2020, 8, 28, 3, 52, 47), 'latitude': -89.9787, 'longitude': -173.293, 'country': 'Albania'}
+Traceback (most recent call last):
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 88, in <module>
+    run_infinite_post_data_loop()
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 81, in run_infinite_post_data_loop
+    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.geo",geo_result)
+  File "F:\DevOps\aiCORE\vsCode\Project\pinterest_data_pipeline\user_posting_emulation.py", line 44, in post_to_api
+    payload =       json.dumps  ({
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javee\Miniconda3\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+(base) 
+javee@DESKTOP-E151L17 MINGW64 /f/DevOps/aiCORE/vsCode/Project/pinterest_data_pipeline (main)
