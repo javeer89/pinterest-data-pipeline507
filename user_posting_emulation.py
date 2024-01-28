@@ -82,10 +82,10 @@ def run_infinite_post_data_loop():
                     for row in user_selected_row:
                         user_result = dict(row._mapping)
                     
-
-                    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.pin",pin_result)
-                    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.geo",geo_result)
-                    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.user",user_result)
+                    
+                    post_to_api("http://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.pin", pin_result)
+                    post_to_api("http://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.geo", geo_result)
+                    post_to_api("http://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.user",user_result)
 
 
 
