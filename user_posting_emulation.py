@@ -4,8 +4,7 @@ import      random
 from        multiprocessing import Process
 import      boto3
 import      json
-import      sqlalchemy
-from        sqlalchemy import text
+from        sqlalchemy import text, create_engine
 from        datetime import datetime, date, time
 
 
@@ -23,13 +22,14 @@ class       AWSDBConnector:
             self.PORT =         3306
             
         def create_db_connector(self):
-            engine =            sqlalchemy.create_engine(f"mysql+pymysql://{self.USER}:{self.PASSWORD}@{self.HOST}:{self.PORT}/{self.DATABASE}?charset=utf8mb4")
+            engine =            create_engine(f"mysql+pymysql://{self.USER}:{self.PASSWORD}@{self.HOST}:{self.PORT}/{self.DATABASE}?charset=utf8mb4")
             return engine
 
 
 new_connector = AWSDBConnector()
 
 '''ASSORT DATE-TIME OBJECTS (USED FOR JSON FILE)'''
+
 def datetime_handler(obj):
     if isinstance(obj, (datetime, date, time)):
         return str(obj)
@@ -37,24 +37,12 @@ def datetime_handler(obj):
 
 '''SEND DATA TO THE KAFKA CLUSTER TOPICS'''
 def post_to_api (invoke_url, result):
+    print('result: :\t', result)
 
-    #NEED TO MORPH THE RESULTS INTO A ACTUAL DICTIONARY BECAUSE THE OUTPUT THOUGH PRESENTED AS A DICT IS ACTUALLY A STRING.
-    result_keys = result.keys()
-    result_values = {}
-    for k in result_keys:
-        result_values[k] = result[k]
+    payload     =       json.dumps  ({"records": [{"value": result}]}, default=datetime_handler)
 
-    print('values_dict: :\t', result_values)
-
-    headers =       {'Content-Type': 'application/vnd.kafka.json.v2+json'}    
-    payload =       json.dumps  ({
-                                "StreamName": (f"{result}_data"),
-                                "Data": result_values
-                                }
-                                , default=datetime_handler 
-                                )
-
-    response = requests.request("POST", invoke_url, headers=headers, data=payload)
+    headers     =       {'Content-Type': 'application/vnd.kafka.json.v2+json'}    
+    response    =       requests.request(method="POST", url=invoke_url, headers=headers, data=payload)
     print(response.status_code)
 
 
@@ -83,9 +71,9 @@ def run_infinite_post_data_loop():
                         user_result = dict(row._mapping)
                     
                     
-                    post_to_api("http://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.pin", pin_result)
-                    post_to_api("http://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.geo", geo_result)
-                    post_to_api("http://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pinDP/topics/0e2a0bfcc015.user",user_result)
+                    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/test/topics/0e2a0bfcc015.pin", pin_result)
+                    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/test/topics/0e2a0bfcc015.geo", geo_result)
+                    post_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/test/topics/0e2a0bfcc015.user",user_result)
 
 
 
@@ -93,3 +81,15 @@ def run_infinite_post_data_loop():
 if __name__ == "__main__":
     run_infinite_post_data_loop()
     print('Working')
+
+'''
+    #NEED TO MORPH THE RESULTS INTO A ACTUAL DICTIONARY BECAUSE THE OUTPUT THOUGH PRESENTED AS A DICT IS ACTUALLY A STRING.
+    result_keys = result.keys()
+    result_values = {}
+    for k in result_keys:
+        result_values[k] = result[k]
+
+    print('values: :\t', result_values)
+
+
+'''
