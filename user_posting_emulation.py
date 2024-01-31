@@ -81,15 +81,3 @@ def run_infinite_post_data_loop():
 if __name__ == "__main__":
     run_infinite_post_data_loop()
     print('Working')
-
-'''
-    #NEED TO MORPH THE RESULTS INTO A ACTUAL DICTIONARY BECAUSE THE OUTPUT THOUGH PRESENTED AS A DICT IS ACTUALLY A STRING.
-    result_keys = result.keys()
-    result_values = {}
-    for k in result_keys:
-        result_values[k] = result[k]
-
-    print('values: :\t', result_values)
-
-
-'''
