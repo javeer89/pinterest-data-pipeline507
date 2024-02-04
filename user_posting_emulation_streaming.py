@@ -39,10 +39,7 @@ def datetime_handler(obj):
 
 '''SEND DATA TO THE KAFKA CLUSTER TOPICS'''
 def put_to_api (invoke_url, result):
-    print('result: :\t', result)
-
-    # invoke url for one record, if you want to put more records replace record with records
-    invoke_url = "https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/stream_test/streams/streaming-0e2a0bfcc015-pin/record"
+    print('result: :\t', result)  
 
     payload     =       json.dumps  ({  "StreamName": "YourStreamName",
                                         "records": [{"value": result}],
@@ -83,9 +80,9 @@ def run_infinite_post_data_loop():
                         user_result = dict(row._mapping)
                     
                     
-                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/stream_test/streams/streaming-0e2a0bfcc015-pin/record", pin_result)
-                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/stream_test/streams/streaming-0e2a0bfcc015-geo/record", geo_result)
-                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/stream_test/streams/streaming-0e2a0bfcc015-user/record",user_result)
+                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-pin/record", pin_result)
+                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-geo/record", geo_result)
+                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-user/record",user_result)
 
 
 
