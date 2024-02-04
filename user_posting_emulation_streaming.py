@@ -37,7 +37,7 @@ def datetime_handler(obj):
 
 
 
-'''SEND DATA TO THE KAFKA CLUSTER TOPICS'''
+'''SEND DATA TO THE KINESIS STREAMS'''
 def put_to_api (invoke_url, result, YourStreamName, PartitionKey):
     print('result: :\t', result)  
 
@@ -80,7 +80,7 @@ def run_infinite_post_data_loop():
                     
                     put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-pin/record", pin_result, "streaming-0e2a0bfcc015-pin", "pin_partition")
                     put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-geo/record", geo_result, "streaming-0e2a0bfcc015-geo", "geo_partition")
-                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-user/record",user_result, "streaming-0e2a0bfcc015-user", "user_partition")
+                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-user/record", user_result, "streaming-0e2a0bfcc015-user", "user_partition")
 
 
 
