@@ -38,20 +38,18 @@ def datetime_handler(obj):
 
 
 '''SEND DATA TO THE KAFKA CLUSTER TOPICS'''
-def put_to_api (invoke_url, result):
+def put_to_api (invoke_url, result, YourStreamName, PartitionKey):
     print('result: :\t', result)  
 
-    payload     =       json.dumps  ({  "StreamName": "YourStreamName",
-                                        "records": [{"value": result}],
-                                        "PartitionKey": "desired-name"                                            
+    payload     =       json.dumps  ({  "StreamName": YourStreamName,
+                                        "Data": [{"value": result}],
+                                        "PartitionKey": PartitionKey                                            
                                         },  default=datetime_handler)
 
 
     headers     =       {'Content-Type': 'application/json'}    
     response    =       requests.request(method="PUT", url=invoke_url, headers=headers, data=payload)
     print(response.status_code)
-
-
 
 
 
@@ -80,9 +78,12 @@ def run_infinite_post_data_loop():
                         user_result = dict(row._mapping)
                     
                     
-                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-pin/record", pin_result)
-                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-geo/record", geo_result)
-                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-user/record",user_result)
+                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-pin/record", pin_result, "streaming-0e2a0bfcc015-pin", "pin_partition")
+                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-geo/record", geo_result, "streaming-0e2a0bfcc015-geo", "geo_partition")
+                    put_to_api("https://moyj7yazp4.execute-api.us-east-1.amazonaws.com/pdp_stream/streams/streaming-0e2a0bfcc015-user/record",user_result, "streaming-0e2a0bfcc015-user", "user_partition")
+
+
+
 
 
 
