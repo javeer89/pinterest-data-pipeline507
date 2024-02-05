@@ -42,7 +42,7 @@ def put_to_api (invoke_url, result, YourStreamName, PartitionKey):
     print('result: :\t', result)  
 
     payload     =       json.dumps  ({  "StreamName": YourStreamName,
-                                        "Data": [{"value": result}],
+                                        "Data": result,
                                         "PartitionKey": PartitionKey                                            
                                         },  default=datetime_handler)
 
