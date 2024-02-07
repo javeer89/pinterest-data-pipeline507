@@ -6,25 +6,9 @@ import      boto3
 import      json
 from        sqlalchemy import text, create_engine
 from        datetime import datetime, date, time
-
+from        db_util import *
 
 random.seed(100)
-
-'''PULLS DATA FROM TARGET LOCATION'''
-class       AWSDBConnector:
-
-        def __init__(self):
-
-            self.HOST =         "pinterestdbreadonly.cq2e8zno855e.eu-west-1.rds.amazonaws.com"
-            self.USER =         'project_user'
-            self.PASSWORD =     ':t%;yCY3Yjg'
-            self.DATABASE =     'pinterest_data'
-            self.PORT =         3306
-            
-        def create_db_connector(self):
-            engine =            create_engine(f"mysql+pymysql://{self.USER}:{self.PASSWORD}@{self.HOST}:{self.PORT}/{self.DATABASE}?charset=utf8mb4")
-            return engine
-
 
 new_connector = AWSDBConnector()
 
@@ -42,7 +26,7 @@ def put_to_api (invoke_url, result, YourStreamName, PartitionKey):
     print('result: :\t', result)  
 
     payload     =       json.dumps  ({  "StreamName": YourStreamName,
-                                        "Data": [{"value": result}],
+                                        "Data": result,
                                         "PartitionKey": PartitionKey                                            
                                         },  default=datetime_handler)
 
