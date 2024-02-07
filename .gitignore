@@ -4,3 +4,6 @@ ignore/
 log/
 0e2a0bfcc015-key-pair.pem
 pdp_notes.ipynb
+__pycache__/
+db_creds.yaml
+
